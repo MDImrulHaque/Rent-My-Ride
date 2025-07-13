@@ -1,0 +1,96 @@
+/* Sign-Up Page Specific Styles */
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.signup-container {
+    width: 400px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.signup-container h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-box span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.input-box input:focus {
+    border-color: #fe5b3d;
+}
+
+.input-box input:focus + span,
+.input-box input:not(:placeholder-shown) + span {
+    top: -10px;
+    font-size: 0.8rem;
+    color: #fe5b3d;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #fe5b3d;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ffac38;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.login-link a {
+    color: #fe5b3d;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
