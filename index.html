@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent My Ride</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+
+
+
+<body>
+<header>
+    <a href="#" class ="logo"><img src="img/jeep.png"></a>
+    <div class ="bx bx-menu" id="menu-icon"></div>
+    <ul class ="navbar">
+      <li> <a href="#home">Home</a></li>
+      <li> <a href="#ride">Ride</a></li>
+      <li> <a href="#services">Services</a></li>
+      <li> <a href="#about">About</a></li>
+      <li> <a href="#Reviews">Reviews</a></li>
+
+    </ul>
+    <div class="header-btn">
+        <a href ="signup.html" class="sign-up">Sign Up</a>
+        <a href ="login.html" class="sign-in">Sign In</a>
+    </div>
+</header>
+<!--home-->
+<section class ="home" id="home">
+ <div class="text">
+  <h1><span>Rent My</span>  <br>Ride </h1>
+
+  <p>Your Best solution to find your desire car as per your need</p>
+  <div class="app-stores">
+     <img src="img/ios.png" alt="">
+     <img src="img/512x512.png"alt="">
+</div>
+ <div class="form-container">
+ <form action="">
+    <div class="input-box">
+        <span>Location</span>
+        <input type="search" name="" id="" placeholder="Search Places">
+    </div>
+    <div class="input-box">
+        <span>Pick-Up Date</span>
+        <input type="date" name=""id="">
+    </div>
+    <div class="input-box">
+        <span>Return Date</span>
+        <input type="date" name=""id="">
+    </div>
+    <input type="submit" name="" id="" class="btn">
+ </form>
+ </div>
+ <div class="bx bx-menu" id="menu-icon"></div>
+ <script>
+    // Toggle Menu
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</section> 
+
+<section class="ride" id="ride">
+    <div class="heading">
+        <span>How Its Work </span>
+        <h1>Rent with 3 Easy Steps</h1>
+    </div> 
+</section>
+
+<div class="ride-container">
+    <div class="box">
+        <i class="bx bxs-map"></i>
+        <h2>Choose A Location</h2>
+        <p>Choose Your  Desire Location </p>
+    </div>
+
+    <div class="box">
+        <i class='bx bxs-calender-check' ></i>
+        <h2>Pick-Up Date</h2>
+        <p>Select Your pickup Date</p>
+    </div>
+
+    <div class="box">
+        <i class='bx bxs-calender-star' ></i>
+        <h2>Book A Vehicle</h2>
+        <p>Click to Book a Vehicle</p>
+    </div>
+    </div>
+</section>
+
+ <section class="services" id="services">
+    <div class="heading">
+        <span>Best Services</span>
+        <h1>Explore Out Top Deals <br>From Top Rated Dealers</h1>
+    </div>
+    <div class="services-container">
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car1.jpg" alt="">
+                <p>2023</p>
+                <h3>Car 1</h3>
+                <h2>$55000  $350 <span>/month</span></h2>
+                <a href="payment.html" class="btn">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car2.jpg" alt="">
+                <p>2024</p>
+                <h3>Car 2</h3>
+                <h2>$35000  $350 <span>/month</span></h2>
+                <a href="payment.html" class="btn">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car3.jpg" alt="">
+                <p>2024</p>
+                <h3>2018 Honda Civic</h3>
+                <h2>$55000  $350 <span>/month</span></h2>
+                <a href="payment.html" class="btn">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/63812_2022_Honda_CB300F_DLX_PRO_1_468x263.jpg" alt="">
+                <p>2024</p>
+                <h3>Honda CB300F 2022 DLX PRO</h3>
+                <h2>$55000  $350 <span>/month</span></h2>
+                <a href="payment.html" class="btn">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/pexels-catiamatos-1045535.jpg" alt="">
+                <p>2024</p>
+                <h3>Scotter</h3>
+                <h2>$2000  $350 <span>/month</span></h2>
+                <a href="payment.html" class="btn">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car6.jpg" alt="">
+                <p>2024</p>
+                <h3>Car 4</h3>
+                <h2>$55000  $350 <span>/month</span></h2>
+                <a href="payment.html" class="btn">Rent Now</a>
+            </div>
+        </div>
+    </div>
+ </section>
+
+
+<section class="about" id="about">
+    <div class="heading">
+        <span>About Us</span>
+        <h1>Best Customer Experience</h1>
+    </div>
+        <div class="about-container">
+                <div class="about-img">
+                    <img src="img/about.png" alt="">
+                </div>
+                <div class="about-text">
+                    <span>About Us</span>
+                    <p>Welcome to Rent My <i class="fas fa-rectangle-wide    "></i>, your premier destination for car, bike, and scooter rentals. Whether you're planning a scenic road trip, need a reliable ride for your daily commute, or want to explore the city on two wheels, we've got you covered. Our mission is to provide you with the best rental experience, combining convenience, affordability, and a wide selection of vehicles to suit every need and preference</p>
+                        <a href="#" class="btn">
+                            Learn More
+                        </a>
+            </div>         
+    </div>
+</section>
+  
+<section class="reviews" id="reviews">
+    <div class="heading">
+        <span>Reviews</span>
+        <h1>Whats Our Customer Say</h1>
+    </div>
+    <div class="reviews-container">
+
+        <div class="box">
+            <div class="rev-img">
+                <img src="img/SHahriar.jpg" alt="">
+            </div>
+            <h2>Shahriar Ahmed</h2>
+            <div class="stars">
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star-half'></i>
+            </div>
+            <p>It was a nice a smooth experience with Rent My Ride.Their service and responce are super fast.</p>
+        </div>
+
+        <div class="box">
+            <div class="rev-img">
+                <img src="img/Raihan.jpg" alt="">
+            </div>
+            <h2>Sultan Raihan</h2>
+            <div class="stars">
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star-half'></i>
+            </div>
+            <p>I was in need of a car to my urgent visit to my home Town Rangamati.And i took the service of Rent My Ride Absolutely Fast and Seceure servide</p>
+        </div>
+
+        <div class="box">
+            <div class="rev-img">
+                <img src="img/Forhad.jpg" alt="">
+            </div>
+            <h2>Forhad Hosen</h2>
+            <div class="stars">
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star-half'></i>
+            </div>
+            <p>Me and my Wife took Car from them to visit cox's bazar And their delivery was perfectly in time</p>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Subscribe To Newsletter</h2>
+    <div class="box">
+        <input type="text" placeholder="Enter Your Email Address...">
+        <a href="#" class="btn">Subscribe</a>
+    </div>
+</section>
+ <div class="copyright">
+    <p>&#169;Rent My Ride</p>
+    <div class="socal">
+        <a href="#"><i class='bx bxl-facebook' ></i></a> 
+        <a href="#"><i class='bx bxl-twitter' ></i></a> 
+        <a href="#"><i class='bx bxl-instagram' ></i></a> 
+    </div>
+</div>
+
+
+    <script src ="main.js"></script>
+</body>
+</html>
