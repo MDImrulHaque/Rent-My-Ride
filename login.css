@@ -1,5 +1,5 @@
-/* Sign-Up Page Specific Styles */
-.signup-page {
+/* Login Page Specific Styles */
+.login-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     padding: 20px;
 }
 
-.signup-container {
+.login-container {
     width: 100%;
     max-width: 400px;
     background: #fff;
@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-.signup-container h1 {
+.login-container h1 {
     margin-bottom: 30px;
     font-size: 2.2rem;
     color: #333;
@@ -94,30 +94,30 @@
     transform: translateY(0);
 }
 
-.login-link {
+.sign-up-link {
     margin-top: 25px;
     font-size: 0.95rem;
     color: #666;
 }
 
-.login-link a {
+.sign-up-link a {
     color: #fe5b3d;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
-.login-link a:hover {
+.sign-up-link a:hover {
     color: #ffac38;
     text-decoration: underline;
 }
 
 @media (max-width: 480px) {
-    .signup-container {
+    .login-container {
         padding: 30px 20px;
     }
     
-    .signup-container h1 {
+    .login-container h1 {
         font-size: 1.8rem;
     }
 }

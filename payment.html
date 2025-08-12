@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Rent Your Ride</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="payment-page">
+        <div class="payment-container">
+            <h1>Choose Payment Method</h1>
+            <form id="paymentForm">
+                <div class="payment-options">
+                    <div class="payment-option" onclick="selectPayment('card')">
+                        <input type="radio" name="payment" value="card" id="card">
+                        <img src="https://images.pexels.com/photos/164501/pexels-photo-164501.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop" alt="Credit Card">
+                        <span>Credit/Debit Card</span>
+                    </div>
+                    
+                    <div class="payment-option" onclick="selectPayment('bkash')">
+                        <input type="radio" name="payment" value="bkash" id="bkash">
+                        <img src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop" alt="bKash">
+                        <span>bKash</span>
+                    </div>
+                    
+                    <div class="payment-option" onclick="selectPayment('nagad')">
+                        <input type="radio" name="payment" value="nagad" id="nagad">
+                        <img src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop" alt="Nagad">
+                        <span>Nagad</span>
+                    </div>
+                    
+                    <div class="payment-option" onclick="selectPayment('rocket')">
+                        <input type="radio" name="payment" value="rocket" id="rocket">
+                        <img src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop" alt="Rocket">
+                        <span>Rocket</span>
+                    </div>
+                    
+                    <div class="payment-option" onclick="selectPayment('cod')">
+                        <input type="radio" name="payment" value="cod" id="cod">
+                        <img src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop" alt="Cash on Delivery">
+                        <span>Cash on Delivery</span>
+                    </div>
+                </div>
+                
+                <div class="payment-details" id="paymentDetails" style="display: none;">
+                    <div class="rental-summary">
+                        <h3>Rental Summary</h3>
+                        <div class="summary-item">
+                            <span>Vehicle:</span>
+                            <span id="vehicleName">Selected Vehicle</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Duration:</span>
+                            <span>1 Month</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Amount:</span>
+                            <span id="amount">$350</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Proceed to Payment</button>
+            </form>
+            
+            <div class="back-link">
+                <a href="index.html">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectPayment(method) {
+            document.getElementById(method).checked = true;
+            document.getElementById('paymentDetails').style.display = 'block';
+        }
+
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const selectedPayment = document.querySelector('input[name="payment"]:checked');
+            
+            if (!selectedPayment) {
+                alert('Please select a payment method');
+                return;
+            }
+            
+            alert(`Payment initiated via ${selectedPayment.value.toUpperCase()}. Thank you for choosing Rent Your Ride!`);
+            window.location.href = 'index.html';
+        });
+
+        // Get vehicle info from URL parameters if available
+        const urlParams = new URLSearchParams(window.location.search);
+        const vehicle = urlParams.get('vehicle');
+        const price = urlParams.get('price');
+        
+        if (vehicle) {
+            document.getElementById('vehicleName').textContent = vehicle;
+        }
+        if (price) {
+            document.getElementById('amount').textContent = price;
+        }
+    </script>
+</body>
+</html>
