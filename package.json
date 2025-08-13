@@ -1,10 +1,13 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "[ Rent Your Ride](https://venerable-capybara-542e05.netlify.app)",
+  "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
