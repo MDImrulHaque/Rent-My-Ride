@@ -20,9 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const vehicleBox = this.closest('.box');
             const vehicleName = vehicleBox.querySelector('h3').textContent;
-            const vehiclePrice = vehicleBox.querySelector('h2').textContent.split(' ')[1];
+            const vehiclePrice = vehicleBox.querySelector('h2').textContent.split(' ')[0];
             
             // Redirect to payment page with vehicle info
             window.location.href = `payment.html?vehicle=${encodeURIComponent(vehicleName)}&price=${encodeURIComponent(vehiclePrice)}`;
@@ -100,6 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add loading animation for buttons
     document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('click', function() {
+            if (this.type !== 'submit') return;
+            
             const originalText = this.textContent;
             this.textContent = 'Loading...';
             this.disabled = true;
